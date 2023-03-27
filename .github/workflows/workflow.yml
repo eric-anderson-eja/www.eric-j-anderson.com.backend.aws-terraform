@@ -15,7 +15,7 @@ jobs:
       
     steps:
     - name: checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Init
       id: init
@@ -60,5 +60,5 @@ jobs:
     needs: update-website-files
     container: cypress/included:9.5.0
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - run: cypress run
