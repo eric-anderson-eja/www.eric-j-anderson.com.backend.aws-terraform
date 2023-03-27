@@ -51,7 +51,9 @@ jobs:
     needs: deploy-frontend
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v5
+        with:
+           build: npx cypress info
 
